@@ -1,8 +1,10 @@
 import React from "react";
+import AddTask from "./AddTask/AddTask";
 
 import styles from "./taskApp.module.css";
 
 import { TaskHeader } from "./TaskHeader";
+import Tasks from "./Tasks/Tasks";
 
 const TaskApp = () => {
   // NOTE: do not delete `data-testid` key value pair
@@ -11,7 +13,9 @@ const TaskApp = () => {
       {/* Header */}
       <TaskHeader />
       {/* Add Task */}
+      <AddTask />
       {/* Tasks */}
+      <Tasks />
     </div>
   );
 };
