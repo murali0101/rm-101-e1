@@ -1,4 +1,5 @@
 import React from "react";
+
 import { useDispatch } from "react-redux";
 import { addTaskData1, deleteData } from "../../redux/action";
 import Counter from "../Counter/Counter";
@@ -16,7 +17,7 @@ const Task = ({ props }) => {
       ) : (
         <input type="checkbox" data-testid="task-checkbox" onClick={()=>{dispatch(addTaskData1([true,id]))}} />
       )}
-      <div data-testid="task-text">{text}</div>
+      <div data-testid="task-text" className={done?styles.textLine:null}>{text}</div>
       {/* Counter here */}
       <Counter props={props} />
       <button
