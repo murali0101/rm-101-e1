@@ -17,7 +17,12 @@ const AddTask = () => {
   return (
     <div className={styles.todoForm}>
       <input data-testid="add-task-input" type="text" onChange={fieldHandler} name="text" />
-      <button data-testid="add-task-button" onClick={ ()=>{dispatch(addTaskData(data))}}>Add Todo</button>
+      <button data-testid="add-task-button" onClick={() => {
+        if (data.text == "") { 
+          return
+        }
+        dispatch(addTaskData(data))
+      }}>Add Todo</button>
     </div>
   );
 };
