@@ -12,11 +12,7 @@ const Task = ({ props }) => {
   // console.log(props)
   return (
     <li data-testid="task" className={styles.task}>
-      {done ? (
-        <input type="checkbox" data-testid="task-checkbox" checked onClick={()=>{dispatch(addTaskData1([false,id]))}} />
-      ) : (
-        <input type="checkbox" data-testid="task-checkbox" onClick={()=>{dispatch(addTaskData1([true,id]))}} />
-      )}
+      <input type="checkbox" data-testid="task-checkbox" checked={done} onClick={()=>{dispatch(addTaskData1([false,id]))}} />
       <div data-testid="task-text" className={done?styles.textLine:null}>{text}</div>
       {/* Counter here */}
       <Counter props={props} />
