@@ -1,8 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { store } from "../../redux/store";
 import styles from "./taskHeader.module.css";
-import data from "../../data/tasks.json";
+// import data from "../../data/tasks.json";
 const TaskHeader = () => {
   // sample values to be replaced
+const todoData = useSelector((store)=>store.todo)
   let val = data.filter((ele) => ele.done == false);
   let totalTask = data.length || 0;
   let unCompletedTask = val.length || 0;
