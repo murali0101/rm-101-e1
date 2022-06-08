@@ -6,8 +6,8 @@ import styles from "./taskHeader.module.css";
 const TaskHeader = () => {
   // sample values to be replaced
 const todoData = useSelector((store)=>store.todo)
-  let val = data.filter((ele) => ele.done == false);
-  let totalTask = data.length || 0;
+  let val = todoData.filter((ele) => ele.done == false);
+  let totalTask = todoData.length || 0;
   let unCompletedTask = val.length || 0;
 
   // NOTE: do not delete `data-testid` key value pair
