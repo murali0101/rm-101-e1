@@ -11,7 +11,7 @@ const Task = ({ props }) => {
       <input type="checkbox" data-testid="task-checkbox" />
       <div data-testid="task-text">{text}</div>
       {/* Counter here */}
-      <Counter/>
+      <Counter props={props}/>
       <button data-testid="task-remove-button">Delete</button>
     </li>
   );
