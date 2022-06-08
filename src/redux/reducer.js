@@ -1,4 +1,4 @@
-import { ADDDATA, ADDTASKDATA, DELETEDATA } from "./action";
+import { ADDDATA, ADDTASKDATA, ADDTASKDATA1, DELETEDATA } from "./action";
 
 const init = {
   todo: [],
@@ -10,13 +10,13 @@ export const Reducer = (store = init, { type, payload }) => {
       return { ...store, todo: [...payload] };
     case ADDTASKDATA:
       return { ...store, todo: [...store.todo,payload] };
-    case ADDTASKDATA1:
-          return {
-              ...store, todo: [...store.todo].map((ele) => {
-                  if (ele.id == payload[1]) { 
-                      ele.done=payload[0]
-                  }
-      }) };
+    // case ADDTASKDATA1:
+    //       return {
+    //           ...store, todo: [...store.todo].map((ele) => {
+    //               if (ele.id == payload[1]) { 
+    //                   ele.done=payload[0]
+    //               }
+    //   }) };
     case DELETEDATA:
       return { ...store, todo: [...store.todo].filter((ele)=>ele.id!=payload) };
     default:
