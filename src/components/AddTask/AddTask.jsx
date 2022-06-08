@@ -12,7 +12,7 @@ const AddTask = () => {
   const [data, setData] = useState({id:uuidv4(),text:"",done:false,count:1})
   function fieldHandler(e) { 
     const { name, value } = e.target
-    setData({...data,[name]:value})
+    setData({...data,[name]:value,id:uuidv4()})
   }
   return (
     <div className={styles.todoForm}>
