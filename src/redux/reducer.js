@@ -10,6 +10,8 @@ export const Reducer = (store = init, { type, payload }) => {
       return { ...store, todo: [...payload] };
     case ADDTASKDATA:
       return { ...store, todo: [...store.todo,payload] };
+    case ADDTASKDATA1:
+      return { ...store, todo: [...store.todo,payload] };
     case DELETEDATA:
       return { ...store, todo: [...store.todo].filter((ele)=>ele.id!=payload) };
     default:

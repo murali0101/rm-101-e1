@@ -17,7 +17,7 @@ const Tasks = () => {
       <ul data-testid="tasks" className={styles.tasks}>
         {/* Task List */}
         {todoData.map((ele, ind) => (
-          <Task props={{ele,ind}} key={ele.id} />
+          <Task props={ele} key={ele.id} />
         ))}
       </ul>
       {data.length == 0 ? (
