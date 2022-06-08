@@ -1,13 +1,15 @@
-import { ADDDATA, DELETEDATA } from "./action";
+import { ADDDATA, ADDTASKDATA, DELETEDATA } from "./action";
 
 const init = {
   todo: [],
 };
 
-export const Reducer = (store = init, { type, payload }) => {s
+export const Reducer = (store = init, { type, payload }) => {
   switch (type) {
     case ADDDATA:
       return { ...store, todo: [...payload] };
+    case ADDTASKDATA:
+      return { ...store, todo: [...store.todo,payload] };
     case DELETEDATA:
       return { ...store, todo: [...store.todo].filter((ele)=>ele.id!=payload) };
     default:
