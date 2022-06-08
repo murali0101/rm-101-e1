@@ -9,13 +9,15 @@ const Tasks = () => {
       <ul data-testid="tasks" className={styles.tasks}>
         {/* Task List */}
         {data.map((ele, ind) => (
-          <Task key={ele.id} />
+          <Task props={ele} key={ele.id} />
         ))}
       </ul>
-      {data.length==0?<div data-testid="tasks-empty" className={styles.empty} >
-        {/* Show when No Tasks are present */}
-        Please Add Some Thing
-      </div>:null}
+      {data.length == 0 ? (
+        <div data-testid="tasks-empty" className={styles.empty}>
+          {/* Show when No Tasks are present */}
+          Please Add Some Thing
+        </div>
+      ) : null}
     </>
   );
 };
