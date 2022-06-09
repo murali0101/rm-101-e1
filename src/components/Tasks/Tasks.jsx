@@ -20,7 +20,7 @@ const Tasks = () => {
           <Task props={ele} key={ele.id} />
         ))}
       </ul>
-      {data.length == 0 ? (
+      {todoData.length == 0 ? (
         <div data-testid="tasks-empty" className={styles.empty}>
           {/* Show when No Tasks are present */}
           Please Add Some Thing
